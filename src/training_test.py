@@ -121,7 +121,7 @@ def features(selected_orders, labels_given=False):
     print('product related features')
     df['aisle_id'] = df.product_id.map(newproducts.aisle_id)
     df['department_id'] = df.product_id.map(newproducts.department_id)
-    df['product_orders'] = df.product_id.map(newproducts.orders).astype(np.int32)
+    df['product_orders'] = df.product_id.map(newproducts.orders)
     df['product_reorders'] = df.product_id.map(newproducts.reorders)
     df['product_reorder_rate'] = df.product_id.map(newproducts.reorder_rate)
 
